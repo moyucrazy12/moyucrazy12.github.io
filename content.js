@@ -12,10 +12,27 @@ window.portfolioMedia = {
         "label": "KTH RPL",
         "url": "https://www.kth.se/rpl"
       }
-    ]
+    ],
+    "video": {
+      "src": "assets/media/rby1-mobipi-preview.gif",
+      "poster": "assets/media/rby1-mobipi.webp",
+      "full": "images_videos/rby1_mobipi_demo.mp4",
+      "alt": "RBY1 mobile manipulator working in a simulated kitchen",
+      "caption": "6-second preview · RBY1 / MoBiPi manipulation demo"
+    }
   },
   "visual-memory": {
-    "images": [],
+    "images": [
+      {
+        "src": "assets/media/spot-room-transition.webp",
+        "original": "images_videos/spot_room_transition.png",
+        "alt": "Spot standing in a doorway between indoor spaces",
+        "caption": "Spot · visual room transitions",
+        "fit": "contain",
+        "width": 992,
+        "height": 1055
+      }
+    ],
     "links": [
       {
         "label": "KTH RPL",
@@ -83,11 +100,25 @@ window.portfolioMedia = {
     }
   },
   "formula-student": {
-    "images": [],
+    "images": [
+      {
+        "src": "assets/media/formula-vehicle.webp",
+        "original": "images_videos/vehicle_formula.jpg",
+        "alt": "KTH Formula Student race car on display outdoors",
+        "caption": "KTH Formula Student · vehicle state estimation",
+        "fit": "contain",
+        "width": 1200,
+        "height": 886
+      }
+    ],
     "links": [
       {
         "label": "KTH Formula Student team",
         "url": "https://kthformulastudent.se/team/"
+      },
+      {
+        "label": "Project paper (PDF)",
+        "url": "pdf_files/ProjectPaper_UKF-EKFCascade_CristhianMallqui.pdf"
       }
     ]
   },
