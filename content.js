@@ -63,12 +63,34 @@ window.portfolioMedia = {
       }
     ]
   },
-  "semantic-mapping": {
+  "mapless-robotics": {
     "images": [],
     "links": [
       {
-        "label": "KTH RPL",
-        "url": "https://www.kth.se/rpl"
+        "label": "Project repository",
+        "url": "https://github.com/DefineDan/mapless-robotics"
+      },
+      {
+        "label": "RealSense integration · realsense_test",
+        "url": "https://github.com/DefineDan/mapless-robotics/tree/realsense_test"
+      }
+    ],
+    "videos": [
+      {
+        "src": "assets/media/mapless-exploration-preview.gif",
+        "poster": "assets/media/mapless-exploration-poster.webp",
+        "full": "images_videos/mapless_robotics_exploration.mp4",
+        "label": "Mapless exploration",
+        "alt": "Exploration demo showing the robot camera views and mapping interface",
+        "caption": "6-second preview · Mapless exploration"
+      },
+      {
+        "src": "assets/media/mapless-navigation-preview.gif",
+        "poster": "assets/media/mapless-navigation-poster.webp",
+        "full": "images_videos/mapless_robotics_navigation.mp4",
+        "label": "Mapless navigation",
+        "alt": "Navigation demo showing a trajectory and indoor robot camera views",
+        "caption": "6-second preview · Mapless navigation"
       }
     ]
   },
@@ -349,5 +371,17 @@ window.portfolioMedia = {
         "url": "https://www.linkedin.com/company/grupo-de-robotica-pucp/posts/"
       }
     ]
+  },
+  "teaching-job": {
+    "images": [],
+    "links": [],
+    "video": {
+      "src": "assets/media/teaching-assistant-preview.gif",
+      "poster": "assets/media/teaching-assistant-poster.webp",
+      "full": "images_videos/TA_robvideo.mp4",
+      "label": "University Teaching Assistant",
+      "alt": "Students demonstrating a robotics project in a teaching lab",
+      "caption": "6-second preview · University Teaching Assistant"
+    }
   }
 };

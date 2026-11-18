@@ -32,3 +32,6 @@
 .background-details { margin-top: 25px; }
 @media(max-width:900px) { .project.has-media { grid-template-columns: 220px 1fr; } .pub.has-media { grid-template-columns: 240px 1fr; gap: 24px; } .entry-gallery.has-multiple { grid-template-columns: 1fr; } }
 @media(max-width:640px) { .project.has-media, .pub.has-media { grid-template-columns: 1fr; } .project .entry-gallery { max-width: 420px; width: 100%; } .project .gif-preview { max-width: 300px; margin-inline: auto; } .pub .entry-gallery { max-width: 420px; } .entry-gallery.has-multiple { grid-template-columns: 1fr 1fr; gap: 10px; } .entry-media img { height: 210px; } .entry-gallery.has-multiple img { height: 190px; } }
+
+/* Keep multiple project demos readable in the narrow media column. */
+.project .entry-gallery.has-multiple { grid-template-columns: 1fr; }

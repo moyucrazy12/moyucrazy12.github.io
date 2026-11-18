@@ -122,66 +122,69 @@
       img.addEventListener('error', () => { figure.remove(); artwork(); }, { once: true });
       gallery.append(figure);
     });
-    const video = config.video;
-    const gifUrl = mediaUrl(video?.src);
-    const posterUrl = mediaUrl(video?.poster);
-    if (gifUrl && posterUrl) {
-      const figure = document.createElement('figure');
-      figure.className = 'entry-media gif-preview';
-      const img = document.createElement('img');
-      img.src = posterUrl.href;
-      img.alt = video.alt || '';
-      img.loading = 'lazy';
-      img.width = 280;
-      img.height = 500;
-      img.className = 'media-contain';
-      const controls = document.createElement('div');
-      controls.className = 'preview-controls';
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'preview-toggle';
-      button.setAttribute('aria-label', `Play preview: ${entry.querySelector('h3').textContent}`);
-      let playing = false;
-      function stop() {
-        playing = false;
+    const videos = config.videos || (config.video ? [config.video] : []);
+    videos.forEach(video => {
+      const gifUrl = mediaUrl(video?.src);
+      const posterUrl = mediaUrl(video?.poster);
+      if (gifUrl && posterUrl) {
+        const figure = document.createElement('figure');
+        figure.className = 'entry-media gif-preview';
+        const img = document.createElement('img');
         img.src = posterUrl.href;
-        button.textContent = 'Play preview';
-        button.setAttribute('aria-pressed', 'false');
-        button.setAttribute('aria-label', `Play preview: ${entry.querySelector('h3').textContent}`);
-      }
-      stop();
-      button.addEventListener('click', () => {
-        if (playing) stop();
-        else {
-          playing = true;
-          img.src = gifUrl.href;
-          button.textContent = 'Stop preview';
-          button.setAttribute('aria-pressed', 'true');
-          button.setAttribute('aria-label', `Stop preview: ${entry.querySelector('h3').textContent}`);
+        img.alt = video.alt || '';
+        img.loading = 'lazy';
+        img.width = 280;
+        img.height = 500;
+        img.className = 'media-contain';
+        const controls = document.createElement('div');
+        controls.className = 'preview-controls';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'preview-toggle';
+        button.setAttribute('aria-label', `Play preview: ${video.label || entry.querySelector('h3').textContent}`);
+        let playing = false;
+        function stop() {
+          playing = false;
+          img.src = posterUrl.href;
+          button.textContent = 'Play preview';
+          button.setAttribute('aria-pressed', 'false');
+          button.setAttribute('aria-label', `Play preview: ${video.label || entry.querySelector('h3').textContent}`);
         }
-      });
-      img.addEventListener('error', () => {
-        if (playing) stop();
-        else { figure.remove(); artwork(); }
-        button.disabled = true;
-      }, { once: true });
-      controls.append(button);
-      const full = mediaUrl(video.full);
-      if (full) {
-        const link = document.createElement('a');
-        link.href = full.href;
-        link.textContent = 'Full video ↗';
-        controls.append(link);
+        stop();
+        button.addEventListener('click', () => {
+          if (playing) stop();
+          else {
+            playing = true;
+            img.src = gifUrl.href;
+            button.textContent = 'Stop preview';
+            button.setAttribute('aria-pressed', 'true');
+            button.setAttribute('aria-label', `Stop preview: ${video.label || entry.querySelector('h3').textContent}`);
+          }
+        });
+        img.addEventListener('error', () => {
+          if (playing) stop();
+          else { figure.remove(); artwork(); }
+          button.disabled = true;
+        }, { once: true });
+        controls.append(button);
+        const full = mediaUrl(video.full);
+        if (full) {
+          const link = document.createElement('a');
+          link.href = full.href;
+          link.textContent = 'Full video ↗';
+          link.setAttribute('aria-label', `Watch full video: ${video.label || entry.querySelector('h3').textContent}`);
+          controls.append(link);
+        }
+        figure.append(img, controls);
+        if (video.caption) {
+          const caption = document.createElement('figcaption');
+          caption.textContent = video.caption;
+          figure.append(caption);
+        }
+        previewControllers.push({ stop, panel: entry.closest('.tab-panel') });
+        gallery.append(figure);
       }
-      figure.append(img, controls);
-      if (video.caption) {
-        const caption = document.createElement('figcaption');
-        caption.textContent = video.caption;
-        figure.append(caption);
-      }
-      previewControllers.push({ stop, panel: entry.closest('.tab-panel') });
-      gallery.append(figure);
-    }
+    });
     artwork();
     if (gallery.childElementCount) {
       gallery.classList.toggle('has-multiple', gallery.childElementCount > 1);
