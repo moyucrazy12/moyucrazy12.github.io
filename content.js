@@ -73,26 +73,20 @@ window.portfolioMedia = {
       {
         "label": "RealSense integration · realsense_test",
         "url": "https://github.com/DefineDan/mapless-robotics/tree/realsense_test"
-      }
-    ],
-    "videos": [
-      {
-        "src": "assets/media/mapless-exploration-preview.gif",
-        "poster": "assets/media/mapless-exploration-poster.webp",
-        "full": "images_videos/mapless_robotics_exploration.mp4",
-        "label": "Mapless exploration",
-        "alt": "Exploration demo showing the robot camera views and mapping interface",
-        "caption": "6-second preview · Mapless exploration"
       },
       {
-        "src": "assets/media/mapless-navigation-preview.gif",
-        "poster": "assets/media/mapless-navigation-poster.webp",
-        "full": "images_videos/mapless_robotics_navigation.mp4",
-        "label": "Mapless navigation",
-        "alt": "Navigation demo showing a trajectory and indoor robot camera views",
-        "caption": "6-second preview · Mapless navigation"
+        "label": "Navigation demo (video)",
+        "url": "images_videos/mapless_robotics_navigation.mp4"
       }
-    ]
+    ],
+    "video": {
+      "src": "assets/media/mapless-exploration-preview.gif",
+      "poster": "assets/media/mapless-exploration-poster.webp",
+      "full": "images_videos/mapless_robotics_exploration.mp4",
+      "label": "Mapless exploration",
+      "alt": "Exploration demo showing the robot camera views and mapping interface",
+      "caption": "6-second preview · Mapless exploration"
+    }
   },
   "clay-printer": {
     "images": [],
@@ -301,12 +295,12 @@ window.portfolioMedia = {
       },
       {
         "src": "assets/media/eth-team.webp",
-        "original": "images_videos/ETH_SS_group.jpeg",
-        "alt": "Summer school teammates at ETH RobotX",
+        "original": "images_videos/ethss_teampic.jpeg",
+        "alt": "ETH RobotX summer school teammates with their robot",
         "caption": "ETH RobotX teammates",
         "fit": "contain",
-        "width": 716,
-        "height": 1200
+        "width": 1200,
+        "height": 903
       }
     ],
     "links": []
@@ -383,5 +377,31 @@ window.portfolioMedia = {
       "alt": "Students demonstrating a robotics project in a teaching lab",
       "caption": "6-second preview · University Teaching Assistant"
     }
+  },
+  "erc-2023": {
+    "images": [],
+    "links": [],
+    "video": {
+      "src": "assets/media/erc2023-preview.gif",
+      "poster": "assets/media/erc2023-poster.webp",
+      "full": "images_videos/erc2023.mp4",
+      "label": "European Rover Challenge 2023",
+      "alt": "A simulated rover manipulator interacting with a control panel during ERC 2023",
+      "caption": "6-second preview · ERC 2023 Remote Edition"
+    }
+  },
+  "rover-funding-2025": {
+    "images": [
+      {
+        "src": "assets/media/rover-pucp-team.webp",
+        "original": "images_videos/rover_demo_pucp.jpeg",
+        "alt": "The PUCP rover team gathered around the university’s first rover",
+        "caption": "PUCP’s first rover · team milestone, 2025",
+        "fit": "contain",
+        "width": 900,
+        "height": 1200
+      }
+    ],
+    "links": []
   }
 };

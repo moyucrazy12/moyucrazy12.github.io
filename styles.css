@@ -26,7 +26,7 @@
 .preview-toggle:hover, .preview-toggle[aria-pressed=true] { background: var(--ink); color: white; }
 .preview-controls a { font-size: .73rem; }
 .gif-preview img { object-fit: contain; }
-#awards .entry-media img { height: auto; aspect-ratio: 1; }
+#awards [data-entry^="lasc-"] .entry-media img { height: auto; aspect-ratio: 1; }
 .award-note { margin-top: 24px; border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 24px 26px; border-radius: 8px; background: white; }
 .award-note p:last-child { margin-bottom: 0; }
 .background-details { margin-top: 25px; }
