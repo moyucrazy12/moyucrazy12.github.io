@@ -295,12 +295,12 @@ window.portfolioMedia = {
       },
       {
         "src": "assets/media/eth-team.webp",
-        "original": "images_videos/ethss_teampic.jpeg",
+        "original": "images_videos/eth_teampic_crop.jpeg",
         "alt": "ETH RobotX summer school teammates with their robot",
         "caption": "ETH RobotX teammates",
         "fit": "contain",
-        "width": 1200,
-        "height": 903
+        "width": 704,
+        "height": 876
       }
     ],
     "links": []
