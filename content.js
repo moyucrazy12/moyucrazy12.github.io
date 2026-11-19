@@ -103,8 +103,8 @@ window.portfolioMedia = {
     "images": [],
     "links": [
       {
-        "label": "PUCP Robotics Group",
-        "url": "https://www.linkedin.com/company/grupo-de-robotica-pucp/posts/"
+        "label": "Chaska Rover Instagram",
+        "url": "https://www.instagram.com/chaskarover.pucp/"
       }
     ],
     "video": {
